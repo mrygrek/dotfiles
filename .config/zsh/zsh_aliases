@@ -1,0 +1,13 @@
+# grep colorizing
+export GREP_COLOR="1;33"
+alias grep='grep -i --color=auto'
+
+# ls output
+alias ls='ls -1 -h --color=auto'
+eval `dircolors -b`
+
+# urxvt with screen
+#alias urxvt='urxvt -e screen -R terminal'
+
+# clear command
+#alias clr='clear'

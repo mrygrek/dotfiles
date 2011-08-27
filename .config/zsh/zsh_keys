@@ -1,0 +1,71 @@
+case $TERM in
+	 *linux)
+	 bindkey "^[[2~" yank
+	 bindkey "^[[3~" delete-char
+	 bindkey "^[[5~" up-line-or-history
+	 bindkey "^[[6~" down-line-or-history
+	 bindkey "^[[1~" beginning-of-line
+	 bindkey "^[[4~" end-of-line
+	 bindkey "^[e" expand-cmd-path ## C-e for expanding path of typed command
+	 bindkey "^[[A" up-line-or-search ## up arrow for back-history-search
+	 bindkey "^[[B" down-line-or-search ## down arrow for fwd-history-search
+	 bindkey " " magic-space ## do history expansion on space
+	 ;;
+	 *xterm*|rxvt*|(dt|k|E)term)
+	 bindkey "^[[2~" yank
+	 bindkey "^[[3~" delete-char
+	 bindkey "^[[5~" up-line-or-history
+	 bindkey "^[[6~" down-line-or-history
+	 bindkey "^[[7~" beginning-of-line
+	 bindkey "^[[8~" end-of-line
+	 bindkey "^E" end-of-line
+	 bindkey "^A" beginning-of-line
+	 bindkey "^[d" kill-word
+	 bindkey "^[[A" up-line-or-search ## up arrow for back-history-search
+	 bindkey "^[[B" down-line-or-search ## down arrow for fwd-history-search
+	 bindkey " " magic-space ## do history expansion on space
+     bindkey "^R" history-incremental-search-backward
+	 ;;
+	 screen*)
+	 bindkey "^[[2~" yank
+	 bindkey "^[[3~" delete-char
+	 bindkey "^[[5~" up-line-or-history
+	 bindkey "^[[6~" down-line-or-history
+	 bindkey "^[[1~" beginning-of-line
+	 bindkey "^[[4~" end-of-line
+	 bindkey "^A" beginning-of-line
+	 bindkey "^E" end-of-line
+     bindkey "^[f" forward-word
+     bindkey "^[b" backward-word
+	 bindkey "^[d" kill-word
+	 bindkey "^[t" transpose-word
+	 bindkey "^[[A" history-search-backward ## up arrow for back-history-search
+	 bindkey "^[[B" history-search-forward ## down arrow for fwd-history-search
+	 bindkey " " magic-space ## do history expansion on space
+     bindkey "^R" history-incremental-search-backward
+	 ;;
+ esac
+
+ # Перебор истории команд как в Vim (с совпадением строки левее курсора).
+ # # Любезно предоставлено Sir Raorn.
+ # bindkey    "^[[A" history-beginning-search-backward
+ # bindkey -a "^[[A" history-beginning-search-backward
+ # bindkey    "^[[B" history-beginning-search-forward
+ # bindkey -a "^[[B" history-beginning-search-forward
+ #
+ # # дополнение по истории, ^X^Z включить ^Z выключить
+ # autoload -U predict-on
+ # zle -N predict-on
+ # zle -N predict-off
+ # bindkey -M emacs "^X^Z" predict-on
+ # bindkey -M emacs "^Z" predict-off
+ # # peжuм нaвuгaцuu в cтuлe emacs
+ # bindkey -e
+ # # режим редактирования команды, вызывает для этого то что в $EDITOR
+ # autoload -U edit-command-line
+ # # Вызов редактора для редактирования строки ввода (хоткей в стиле emacs)
+ # # bindkey -M vicmd v edit-command-line для командного режима vi
+ # zle -N edit-command-line
+ # bindkey -M emacs "^X^E" edit-command-line
+ # #завершить слово команду
+ # bindkey -M emacs "^N" complete-word

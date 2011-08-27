@@ -1,0 +1,44 @@
+#
+# Here are kept all functions written in zsh
+#
+
+man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;37m") \
+        LESS_TERMCAP_md=$(printf "\e[1;37m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;47;30m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[0;36m") \
+            man "$@"
+}
+
+fgf(){
+    echo -e `curl -s http://fucking-great-advice.ru/api/random | \
+    perl -MHTML::Entities -lpe '$_=~s/.*['"'"'"]?text['"'"'"]?\s*:\s*['"'"'"]([^'"'"'"]+)['"'"'"].*/\1/; decode_entities($_)'` 
+}
+
+wanip() {
+    wget -q -O - checkip.dyndns.com/ | awk '{print $6}'| sed 's/<.*>//'
+}
+
+#------------------------------
+## Window title
+##------------------------------
+#case $TERM in
+  #*xterm*|rxvt|rxvt-unicode|rxvt-256color|(dt|k|E)term)
+          #precmd () { print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a" }
+          #preexec () { print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~] ($1)\a" }
+        #;;
+    #screen*)
+            #precmd () {
+               #print -Pn "\e]83;title \"$1\"\a"
+               #print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a"
+            #}
+            #preexec () {
+               #print -Pn "\e]83;title \"$1\"\a"
+               #print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~] ($1)\a"
+            #}
+    #;;
+#esac
