@@ -1,6 +1,3 @@
-# # загружаем дефолтный профиль оболочки
-source /etc/profile
-
 # # Папка для различных файлов конфигурации
 ZDIR=~/.config/zsh
 
@@ -36,12 +33,14 @@ export EDITOR=/usr/bin/vim
 # # пути где искать бинарники
 export PATH="$PATH:/home/ygrek/Development/scripts" #:/opt/matlab/bin"
 # # решение проблемы скайпа в отображении аватаров
-#export QT_PLUGIN_PATH=$QT_PLUGIN_PATH:/opt/lib32/usr/lib/qt/plugins
+# задается в /etc/profile.d/lib32-qt.sh
+
 # # точка монтирования iPod Shuffle
 export IPOD_MOUNTPOINT=/media/CRUMB
+
 # # ООо и русские имена файлов
 # задается в /etc/profile.d/openoffice.sh
-#export OOO_FORCE_DESKTOP=kde
+
 # # забыл зачем ставил
 export LESSCHARSET=UTF-8
 #разукрашиваем ls и автодополнение
