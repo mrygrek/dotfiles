@@ -1,8 +1,4 @@
-set pastetoggle=<F5>
-
-" Colorscheme settings
-set t_Co=256
-colorscheme wombat256mod
+set pastetoggle=<F4>
 
 " Ignore case while searching
 set ignorecase
@@ -34,7 +30,7 @@ filetype on
 filetype plugin on
 
 " syntax-highlight
-syntax on
+syntax enable
 
 " OmniCppComplete
 " These are tags for omnicpp
@@ -53,17 +49,20 @@ syntax on
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 
-" latex-suite issue
-let g:tex_flavor='tex'
+" ------------------------------------------------------------------
+" Vim-latexsuite settings
+" ------------------------------------------------------------------
+filetype plugin indent on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME ",$VIM/vimfiles/after,~/.vim/a
 
 " Use the same symbols as TextMate for tabstops and EOLs
 "set listchars=tab:▸\ ,eol:¬
 
 " Вводить команды можно и не переключаясь в английскую раскладку
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
-"set keymap=russian-jcukenwin
-"set iminsert=0
-"set imsearch=0
 "highlight lCursor guifg=NONE guibg=Cyan
 
 """ Mappings  """
@@ -86,3 +85,31 @@ inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 " Switch tabs
 "noremap <C-n> :tabn<cr>
 "noremap <C-p> :tabp<cr>
+
+" ------------------------------------------------------------------
+" Colorscheme settings
+" ------------------------------------------------------------------
+"set t_Co=256
+syntax enable
+colorscheme solarized
+set background=dark
+
+" ------------------------------------------------------------------
+" Solarized Colorscheme Config
+" ------------------------------------------------------------------
+" let g:solarized_termtrans=0
+" let g:solarized_degrade=0
+" let g:solarized_bold=1
+" let g:solarized_underline=1
+" let g:solarized_italic=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+" let g:solarized_visibility="normal"
+" let g:solarized_diffmode="normal"
+" let g:solarized_hitrail=0
+" let g:solarized_menu=1
+
+"
+" Auto close pair of characters 
+"
+let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '"'}
