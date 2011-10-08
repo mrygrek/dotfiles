@@ -23,7 +23,8 @@ set smarttab
 set et
 
 " Backup and swap settings
-set backupdir=/home/ygrek/.vim/backup,/tmp
+set backupdir=/home/ygrek/.vim/backup
+set directory=/home/ygrek/.vim/tmp
 
 " Включаем распознавание типов файлов и типо-специфичные плагины:
 filetype on
