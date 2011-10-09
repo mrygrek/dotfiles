@@ -1,48 +1,48 @@
 case $TERM in
 	 *linux)
-	 bindkey "^[[2~" yank
-	 bindkey "^[[3~" delete-char
-	 bindkey "^[[5~" up-line-or-history
-	 bindkey "^[[6~" down-line-or-history
-	 bindkey "^[[1~" beginning-of-line
-	 bindkey "^[[4~" end-of-line
-	 bindkey "^[e" expand-cmd-path ## C-e for expanding path of typed command
-	 bindkey "^[[A" up-line-or-search ## up arrow for back-history-search
-	 bindkey "^[[B" down-line-or-search ## down arrow for fwd-history-search
-	 bindkey " " magic-space ## do history expansion on space
+	    bindkey "^[[2~" yank
+	    bindkey "^[[3~" delete-char
+	    bindkey "^[[5~" up-line-or-history
+	    bindkey "^[[6~" down-line-or-history
+	    bindkey "^[[1~" beginning-of-line
+	    bindkey "^[[4~" end-of-line
+	    bindkey "^[e" expand-cmd-path ## C-e for expanding path of typed command
+	    bindkey "^[[A" up-line-or-search ## up arrow for back-history-search
+	    bindkey "^[[B" down-line-or-search ## down arrow for fwd-history-search
+	    bindkey " " magic-space ## do history expansion on space
 	 ;;
 	 *xterm*|rxvt*|(dt|k|E)term)
-	 bindkey "^[[2~" yank
-	 bindkey "^[[3~" delete-char
-	 bindkey "^[[5~" up-line-or-history
-	 bindkey "^[[6~" down-line-or-history
-	 bindkey "^[[7~" beginning-of-line
-	 bindkey "^[[8~" end-of-line
-	 bindkey "^E" end-of-line
-	 bindkey "^A" beginning-of-line
-	 bindkey "^[d" kill-word
-	 bindkey "^[[A" up-line-or-search ## up arrow for back-history-search
-	 bindkey "^[[B" down-line-or-search ## down arrow for fwd-history-search
-	 bindkey " " magic-space ## do history expansion on space
-     bindkey "^R" history-incremental-search-backward
+	    bindkey "^[[2~" yank
+	    bindkey "^[[3~" delete-char
+	    bindkey "^[[5~" up-line-or-history
+	    bindkey "^[[6~" down-line-or-history
+	    bindkey "^[[7~" beginning-of-line
+	    bindkey "^[[8~" end-of-line
+	    bindkey "^E" end-of-line
+	    bindkey "^A" beginning-of-line
+	    bindkey "^[d" kill-word
+	    bindkey "^[[A" up-line-or-search ## up arrow for back-history-search
+	    bindkey "^[[B" down-line-or-search ## down arrow for fwd-history-search
+	    bindkey " " magic-space ## do history expansion on space
+        bindkey "^R" history-incremental-search-backward
 	 ;;
 	 screen*)
-	 bindkey "^[[2~" yank
-	 bindkey "^[[3~" delete-char
-	 bindkey "^[[5~" up-line-or-history
-	 bindkey "^[[6~" down-line-or-history
-	 bindkey "^[[1~" beginning-of-line
-	 bindkey "^[[4~" end-of-line
-	 bindkey "^A" beginning-of-line
-	 bindkey "^E" end-of-line
-     bindkey "^[f" forward-word
-     bindkey "^[b" backward-word
-	 bindkey "^[d" kill-word
-	 bindkey "^[t" transpose-word
-	 bindkey "^[[A" history-search-backward ## up arrow for back-history-search
-	 bindkey "^[[B" history-search-forward ## down arrow for fwd-history-search
-	 bindkey " " magic-space ## do history expansion on space
-     bindkey "^R" history-incremental-search-backward
+	    bindkey "^[[2~" yank
+	    bindkey "^[[3~" delete-char
+	    bindkey "^[[5~" up-line-or-history
+	    bindkey "^[[6~" down-line-or-history
+	    bindkey "^[[1~" beginning-of-line
+	    bindkey "^[[4~" end-of-line
+	    bindkey "^A" beginning-of-line
+	    bindkey "^E" end-of-line
+        bindkey "^[f" forward-word
+        bindkey "^[b" backward-word
+	    bindkey "^[d" kill-word
+	    bindkey "^[t" transpose-word
+	    bindkey "^[[A" history-search-backward ## up arrow for back-history-search
+	    bindkey "^[[B" history-search-forward ## down arrow for fwd-history-search
+	    bindkey " " magic-space ## do history expansion on space
+        bindkey "^R" history-incremental-search-backward
 	 ;;
  esac
 
