@@ -90,10 +90,10 @@ inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 " ------------------------------------------------------------------
 " Colorscheme settings
 " ------------------------------------------------------------------
-"set t_Co=256
-syntax enable
-colorscheme solarized
+" set t_Co=256
+" syntax enable
 set background=dark
+colorscheme solarized
 
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
