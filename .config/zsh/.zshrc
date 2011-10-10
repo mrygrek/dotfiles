@@ -31,7 +31,7 @@ export GREP_COLOR="1;33"
 # # редактор по дефолту
 export EDITOR=/usr/bin/vim
 # # пути где искать бинарники
-export PATH="$PATH:/home/ygrek/Development/scripts" #:/opt/matlab/bin"
+export PATH="$PATH:/home/ygrek/bin" #:/opt/matlab/bin"
 # # решение проблемы скайпа в отображении аватаров
 # задается в /etc/profile.d/lib32-qt.sh
 
