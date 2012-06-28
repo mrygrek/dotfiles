@@ -70,7 +70,7 @@ zmodload -ap zsh/mapfile mapfile
 # # Completions
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX+$#SUFFIX)/3 )) numeric )'
-zstyle ':completion:*:expand:*' tag-order all-expansions
+zstyle ':completion:*:expand:*' tag-order commands functions #all-expansions
 zstyle ':completion:*' verbose yes
 zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
