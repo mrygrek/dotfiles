@@ -1,3 +1,9 @@
+" ------------------------------------------------------------------
+" 80-th line highlighting
+" ------------------------------------------------------------------
+highlight ColorColumn ctermbg=Cyan
+set colorcolumn=99
+
 set pastetoggle=<F4>
 
 " Ignore case while searching
@@ -20,11 +26,13 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set et
+set expandtab
 
 " Backup and swap settings
 set backupdir=/home/ygrek/.vim/backup
 set directory=/home/ygrek/.vim/tmp
+" Path for runtime commands
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME ",$VIM/vimfiles/after,~/.vim/a
 
 " Включаем распознавание типов файлов и типо-специфичные плагины:
 filetype on
@@ -57,22 +65,20 @@ filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
-set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME ",$VIM/vimfiles/after,~/.vim/a
-
 " Use the same symbols as TextMate for tabstops and EOLs
-"set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬
 
 " Вводить команды можно и не переключаясь в английскую раскладку
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
-"highlight lCursor guifg=NONE guibg=Cyan
+highlight lCursor guifg=NONE guibg=Cyan
 
 """ Mappings  """
 "Open NERDTree 
 map <c-j>o :NERDTree<cr>
 
 " Abbreviations for dealing with several splits
-ab Q qall
-ab W wall
+abbreviate Q qall
+abbreviate W wall
 
 
 " build tags of your own project with CTRL+F12
@@ -88,27 +94,26 @@ inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 "noremap <C-p> :tabp<cr>
 
 " ------------------------------------------------------------------
-" Colorscheme settings
-" ------------------------------------------------------------------
-" set t_Co=256
-" syntax enable
-set background=dark
-colorscheme solarized
-
-" ------------------------------------------------------------------
 " Solarized Colorscheme Config
 " ------------------------------------------------------------------
-" let g:solarized_termtrans=0
-" let g:solarized_degrade=0
-" let g:solarized_bold=1
-" let g:solarized_underline=1
-" let g:solarized_italic=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-" let g:solarized_visibility="normal"
-" let g:solarized_diffmode="normal"
-" let g:solarized_hitrail=0
-" let g:solarized_menu=1
+"let g:solarized_termtrans=0
+"let g:solarized_degrade=0
+"let g:solarized_bold=1
+"let g:solarized_underline=1
+"let g:solarized_italic=1
+"let g:solarized_termcolors=256
+let g:solarized_contrast="normal"
+let g:solarized_visibility="low"
+let g:solarized_diffmode="normal"
+"let g:solarized_hitrail=0
+"let g:solarized_menu=1
+
+" ------------------------------------------------------------------
+" Colorscheme settings
+" ------------------------------------------------------------------
+set t_Co=256
+set background=dark
+colorscheme solarized
 
 "
 " Auto close pair of characters 
