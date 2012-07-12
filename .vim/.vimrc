@@ -1,8 +1,9 @@
-" ------------------------------------------------------------------
-" 80-th line highlighting
-" ------------------------------------------------------------------
+" 99-th line highlighting
 highlight ColorColumn ctermbg=Cyan
 set colorcolumn=99
+" Highlighting for current line
+highlight CurrentLineNr ctermbg=DarkCyan
+set cursorline
 
 set pastetoggle=<F4>
 
