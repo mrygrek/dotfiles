@@ -133,6 +133,3 @@ zle -N self-insert url-quote-magic
 #
 # # куда же мы без калькулятора
 autoload -U zcalc
-
-# UNIX-socket для urxvt
-export RXVT_SOCKET=/tmp/.rxvt.socket
