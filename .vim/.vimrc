@@ -19,11 +19,11 @@ set wildmenu
 " Line numbering
 set number
 set numberwidth=1
-" Автоотступ
+" Autoindent settings
 set autoindent
 set smartindent
 
-" Настройка табуляции
+" Tab seetings
 set tabstop=4
 set shiftwidth=4
 set smarttab
@@ -32,28 +32,13 @@ set expandtab
 " Backup and swap settings
 set backupdir=/home/ygrek/.vim/backup
 set directory=/home/ygrek/.vim/tmp
-" Path for runtime commands
-" set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME ",$VIM/vimfiles/after,~/.vim/a
-
-" Включаем распознавание типов файлов и типо-специфичные плагины:
-" filetype on
-" filetype plugin on
 
 " syntax-highlight
 syntax enable
 
-" OmniCppComplete
-" These are tags for omnicpp
-"set tags+=/home/ygrek/.vim/tags/stl
-"set tags+=/home/ygrek/.vim/tags/qt
-
-"let OmniCpp_NamespaceSearch = 1
-"let OmniCpp_GlobalScopeSearch = 1
-"let OmniCpp_ShowAccess = 1
-"let OmniCpp_MayCompleteDot = 1
-"let OmniCpp_MayCompleteArrow = 1
-"let OmniCpp_MayCompleteScope = 1
-"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" Abbreviations for dealing with several splits
+abbreviate Q qall
+abbreviate W wall
 
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
@@ -62,36 +47,25 @@ set completeopt=menuone,menu,longest,preview
 " ------------------------------------------------------------------
 " Vim-latexsuite settings
 " ------------------------------------------------------------------
-" filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
-" Вводить команды можно и не переключаясь в английскую раскладку
+" Entering commands in cyrillic keyboard layout
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
-highlight lCursor guifg=NONE guibg=Cyan
 
-""" Mappings  """
-"Open NERDTree 
+" ------------------------------------------------------------------
+" NERDTree settings
+" ------------------------------------------------------------------
+"Open hotkey 
 map <c-j>o :NERDTree<cr>
-
-" Abbreviations for dealing with several splits
-abbreviate Q qall
-abbreviate W wall
 
 " build tags of your own project with CTRL+F12
 "map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 noremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
-
-" New tab
-"noremap <C-t> :tabnew<cr>
-
-" Switch tabs
-"noremap <C-n> :tabn<cr>
-"noremap <C-p> :tabp<cr>
 
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
@@ -115,7 +89,7 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
-"
+" ------------------------------------------------------------------
 " Auto close pair of characters. Plugin vim-autoclose required.
-"
+" ------------------------------------------------------------------
 let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '"'}
