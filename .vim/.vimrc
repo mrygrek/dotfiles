@@ -81,6 +81,8 @@ let g:solarized_visibility="low"
 let g:solarized_diffmode="normal"
 "let g:solarized_hitrail=0
 "let g:solarized_menu=1
+" <F5> switches between light and dark background modes and resets the colorscheme 
+call togglebg#map("<F5>")
 
 " ------------------------------------------------------------------
 " Colorscheme settings
