@@ -23,7 +23,7 @@ set numberwidth=1
 set autoindent
 set smartindent
 
-" Tab seetings
+" Tab settings
 set tabstop=4
 set shiftwidth=4
 set smarttab
@@ -86,7 +86,7 @@ let g:solarized_diffmode="normal"
 " Colorscheme settings
 " ------------------------------------------------------------------
 set t_Co=256
-set background=dark
+set background=light
 colorscheme solarized
 
 " ------------------------------------------------------------------
