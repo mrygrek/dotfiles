@@ -33,11 +33,11 @@ set expandtab
 set backupdir=/home/ygrek/.vim/backup
 set directory=/home/ygrek/.vim/tmp
 " Path for runtime commands
-set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME ",$VIM/vimfiles/after,~/.vim/a
+" set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME ",$VIM/vimfiles/after,~/.vim/a
 
 " Включаем распознавание типов файлов и типо-специфичные плагины:
-filetype on
-filetype plugin on
+" filetype on
+" filetype plugin on
 
 " syntax-highlight
 syntax enable
@@ -62,7 +62,7 @@ set completeopt=menuone,menu,longest,preview
 " ------------------------------------------------------------------
 " Vim-latexsuite settings
 " ------------------------------------------------------------------
-filetype plugin indent on
+" filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
@@ -80,7 +80,6 @@ map <c-j>o :NERDTree<cr>
 " Abbreviations for dealing with several splits
 abbreviate Q qall
 abbreviate W wall
-
 
 " build tags of your own project with CTRL+F12
 "map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -117,6 +116,6 @@ set background=dark
 colorscheme solarized
 
 "
-" Auto close pair of characters 
+" Auto close pair of characters. Plugin vim-autoclose required.
 "
 let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '"'}
