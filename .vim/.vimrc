@@ -30,8 +30,8 @@ set smarttab
 set expandtab
 
 " Backup and swap settings
-set backupdir=/home/ygrek/.vim/backup
-set directory=/home/ygrek/.vim/tmp
+set backupdir=$HOME/.vim/backup
+set directory=$HOME/.vim/tmp
 
 " syntax-highlight
 syntax enable
@@ -54,6 +54,7 @@ let g:tex_flavor = "latex"
 set listchars=tab:▸\ ,eol:¬
 
 " Entering commands in cyrillic keyboard layout
+set encoding=utf-8
 set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 " ------------------------------------------------------------------
