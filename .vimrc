@@ -12,7 +12,8 @@ Bundle 'gmarik/vundle'
 
 Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
-Bundle 'git://github.com/Townk/vim-autoclose'
+Bundle 'https://github.com/Townk/vim-autoclose'
+Bundle 'https://github.com/Lokaltog/vim-powerline'
 
 filetype plugin indent on     " required!"
 

@@ -96,3 +96,10 @@ colorscheme solarized
 " Auto close pair of characters. Plugin vim-autoclose required.
 " ------------------------------------------------------------------
 let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '"'}
+
+" ------------------------------------------------------------------
+"  Fancy powerline
+" ------------------------------------------------------------------
+set laststatus=2
+let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'unicode'
