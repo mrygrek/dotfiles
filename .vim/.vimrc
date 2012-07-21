@@ -41,8 +41,20 @@ abbreviate Q qall
 abbreviate W wall
 
 " automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
+
+" Entering commands in cyrillic keyboard layout
+set encoding=utf-8
+set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
+
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+" build tags of your own project with CTRL+F12
+"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+noremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
+inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 
 " ------------------------------------------------------------------
 " Vim-latexsuite settings
@@ -50,23 +62,11 @@ set completeopt=menuone,menu,longest,preview
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-
-" Entering commands in cyrillic keyboard layout
-set encoding=utf-8
-set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁЙЦУКЕHГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
-
 " ------------------------------------------------------------------
 " NERDTree settings
 " ------------------------------------------------------------------
-"Open hotkey 
+" Open hotkey
 map <c-j>o :NERDTree<cr>
-
-" build tags of your own project with CTRL+F12
-"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-noremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
-inoremap <F12> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 
 " ------------------------------------------------------------------
 " Solarized Colorscheme Config
@@ -89,7 +89,7 @@ call togglebg#map("<F5>")
 " Colorscheme settings
 " ------------------------------------------------------------------
 set t_Co=256
-set background=light
+set background=dark
 colorscheme solarized
 
 " ------------------------------------------------------------------
@@ -102,4 +102,5 @@ let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '
 " ------------------------------------------------------------------
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
-"let g:Powerline_symbols = 'unicode'
+let g:Powerline_theme='default'
+let g:Powerline_colorscheme='skwp'
