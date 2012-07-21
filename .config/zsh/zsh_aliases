@@ -6,6 +6,9 @@ alias grep='grep -i --color=auto'
 alias ls='ls -1 -h --color=auto'
 eval `dircolors -b`
 
+# sudo editor
+alias svim='sudo -E vim'
+
 # urxvt with screen
 #alias urxvt='urxvt -e screen -R terminal'
 
