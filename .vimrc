@@ -14,6 +14,7 @@ Bundle 'https://github.com/altercation/vim-colors-solarized.git'
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/Townk/vim-autoclose'
 Bundle 'https://github.com/Lokaltog/vim-powerline'
+Bundle 'https://github.com/kien/ctrlp.vim'
 
 filetype plugin indent on     " required!"
 

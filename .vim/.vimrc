@@ -104,3 +104,8 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_theme='default'
 let g:Powerline_colorscheme='skwp'
+
+" ------------------------------------------------------------------
+"  CtrlP plugin settings
+" ------------------------------------------------------------------
+let g:ctrlp_clear_cache_on_exit = 0
