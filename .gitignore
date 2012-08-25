@@ -1,0 +1,17 @@
+# Do not track anything except for explicitly allowed
+/*
+
+# Track gitignore rules
+!.gitignore
+
+# Do not track .config directory but allow to include sub-directories if needed
+!.config/
+.config/*
+
+# Vim configuration
+!.vim/.vimrc
+!.vimrc
+
+# Zsh configuration
+!.config/zsh/
+!.zshrc
