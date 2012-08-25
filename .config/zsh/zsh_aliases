@@ -3,7 +3,11 @@ export GREP_COLOR="1;33"
 alias grep='grep -i --color=auto'
 
 # ls output
-alias ls='ls -1 -h --color=auto'
+if [[ $OSTYPE == 'darwin12.0' ]]; then
+    alias ls='ls -1 -h -G'
+elif [[ $OSTYPE == 'linux-gnu' ]]; then
+    alias ls='ls -1 -h --color=auto'
+fi
 eval `dircolors -b`
 
 # sudo editor
