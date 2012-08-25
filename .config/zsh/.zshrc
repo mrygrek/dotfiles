@@ -41,11 +41,25 @@ export IPOD_MOUNTPOINT=/media/CRUMB
 
 # # забыл зачем ставил
 export LESSCHARSET=UTF-8
-#разукрашиваем ls и автодополнение
-export LS_COLORS='no=00;37:fi=00;37:di=01;36:ln=04;36:pi=33:so=01;35:do=01;35:bd=33;01:cd=33;01:or=31;01:su=37:sg=30:tw=30:ow=34:st=37:ex=01;31:*.cmd=01;31:*.exe=01;31:*.com=01;31:*.btm=01;31:*.sh=01;31:*.run=01;31:*.tar=33:*.tgz=33:*.arj=33:*.taz=33:*.lzh=33:*.zip=33:*.z=33:*.Z=33:*.gz=33:*.bz2=33:*.deb=33:*.rpm=33:*.jar=33:*.rar=33:*.jpg=32:*.JPG=32:*.JPEG=32:*.jpeg=32:*.gif=32:*.bmp=32:*.pbm=32:*.pgm=32:*.ppm=32:*.tga=32:*.xbm=32:*.xpm=32:*.tif=32:*.tiff=32:*.png=32:*.mov=34:*.mpg=34:*.mpeg=34:*.avi=34:*.fli=34:*.flv=34:*.3gp=34:*.mp4=34::*.mkv=34:*.divx=34:*.gl=32:*.dl=32:*.xcf=32:*.xwd=32:*.flac=35:*.mp3=35:*.mpc=35:*.ogg=35:*.wav=35:*.m3u=35:';
+
+# LS output and completion coloring
+#  if solarized scheme for dircolors is present, use it
+#  link: https://github.com/seebi/dircolors-solarized
+if [[ -f $HOME/.colors/dircolors-solarized/dircolors.ansi-dark ]]; then
+    COLOR_ARGS="$HOME/.colors/dircolors-solarized/dircolors.ansi-dark"
+else
+    COLOR_ARGS='-b'
+fi
+
+if [[ $OSTYPE == 'darwin12.0' ]]; then
+    export CLICOLOR=1
+    eval $(gdircolors $COLOR_ARGS)
+elif [[ $OSTYPE == 'linux-gnu' ]]; then
+    eval $(dircolors $COLOR_ARGS)
+fi
+
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-# Further enhance the colored ls output; for example, broken (orphan) symlinks will start showing in a red hue. 
-eval $(dircolors -b)
+
 #Опции less
 export LESS='-R -S'
 #
