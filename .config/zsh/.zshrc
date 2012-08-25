@@ -26,8 +26,9 @@ cdpath=( . ~ )
 
 # # переменные окружения
 
-#оформим подсветку в grep
-export GREP_COLOR="1;33"
+# grep output coloring
+export GREP_COLOR="5;33;40"
+export GREP_OPTIONS="-i --color=auto"
 # # редактор по дефолту
 export EDITOR=/usr/bin/vim
 # # пути где искать бинарники

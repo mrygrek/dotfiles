@@ -1,7 +1,3 @@
-# grep colorizing
-export GREP_COLOR="1;33"
-alias grep='grep -i --color=auto'
-
 # OS specific aliases
 if [[ $OSTYPE == 'darwin12.0' ]]; then
     # Use coreutils if installed
