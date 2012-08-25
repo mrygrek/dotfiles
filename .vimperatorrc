@@ -1,0 +1,49 @@
+" mail shortcut
+command -nargs=* mail tabopen https://mail.google.com/mail
+
+" calendar shortcut
+command -nargs=* cal tabopen http://www.google.com/calendar/render?tab=oc
+
+" googledocs
+command -nargs=* docs tabopen http://docs.google.com/#all
+
+" google bookmarks shortcut
+command -nargs=* gmarks sidebar Закладки Google
+
+"
+" key mappings
+"
+" bookmarks Ctrl+B
+map <silent> <A-b> :sidebar Закладки<CR>
+
+" downloads in current tab
+map <silent> <C-y> :tabopen<CR> :downloads<CR>
+
+" open Google translate in new tab
+map <A-t> :tabopen http://translate.google.com/#en|ru|<CR>
+
+" show navigation bar
+map <A-n> :set gui=invnavigation<CR> 
+
+" switch to the last tab
+map <C-l> <C-^>
+
+" 
+" Autocompletion options
+"
+set complete=lS 
+set wildmode=list:full
+
+"
+" Search options
+"
+set incsearch=true
+set hlsearch=true
+set ignorecase=true
+
+"
+" Animations
+"
+set animations=true
+
+" vim: ft=vimperator

@@ -15,3 +15,6 @@
 # Zsh configuration
 !.config/zsh/
 !.zshrc
+
+# Vimperator config
+!.vimperatorrc
