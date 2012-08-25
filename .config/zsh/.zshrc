@@ -31,7 +31,7 @@ export GREP_COLOR="1;33"
 # # редактор по дефолту
 export EDITOR=/usr/bin/vim
 # # пути где искать бинарники
-export PATH="$PATH:/home/ygrek/bin"
+export PATH="$PATH:$HOME/bin"
 
 # # точка монтирования iPod Shuffle
 export IPOD_MOUNTPOINT=/media/CRUMB
