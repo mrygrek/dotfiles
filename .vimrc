@@ -1,7 +1,7 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
  
-set runtimepath+=~/.vim/bundle/vundle/
+set runtimepath+=$HOME/.config/vim/bundle/vundle/
 call vundle#rc()
  
 " install Vundle
@@ -18,4 +18,4 @@ Bundle 'https://github.com/kien/ctrlp.vim'
 
 filetype plugin indent on     " required!"
 
-source $HOME/.vim/.vimrc
+source $HOME/.config/vim/.vimrc
