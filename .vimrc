@@ -5,7 +5,7 @@ set runtimepath+=$HOME/.config/vim/bundle/vundle/
 call vundle#rc()
  
 " install Vundle
-"     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"     git clone https://github.com/gmarik/vundle.git ~/.config/vim/bundle/vundle
 
 " let Vundle manage Vundle.    " required! 
 Bundle 'gmarik/vundle'
