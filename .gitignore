@@ -9,7 +9,9 @@
 .config/*
 
 # Vim configuration
-!.vim/.vimrc
+!.config/vim
+.config/vim/*
+!.config/vim/.vimrc
 !.vimrc
 
 # Zsh configuration

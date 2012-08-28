@@ -101,7 +101,11 @@ let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '
 "  Fancy powerline
 " ------------------------------------------------------------------
 set laststatus=2
-let g:Powerline_symbols = 'fancy'
+if has('win32')
+    let g:Powerline_symbols = 'compatible'
+elseif
+    let g:Powerline_symbols = 'fancy'
+endif
 let g:Powerline_theme='default'
 let g:Powerline_colorscheme='skwp'
 
