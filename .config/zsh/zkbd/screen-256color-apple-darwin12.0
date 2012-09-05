@@ -1,4 +1,5 @@
 typeset -g -A key
+bindkey -m
 
 key[F1]='^[OP'
 key[F2]='^[OQ'
