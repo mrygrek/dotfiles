@@ -103,7 +103,7 @@ let g:AutoClosePairs = {'<': '>', '(': ')', '[': ']', '{': '}', "'": "'", '"': '
 set laststatus=2
 if has('win32')
     let g:Powerline_symbols = 'compatible'
-elseif
+else
     let g:Powerline_symbols = 'fancy'
 endif
 let g:Powerline_theme='default'
