@@ -31,9 +31,12 @@ export GREP_COLOR="5;33;40"
 export GREP_OPTIONS="-i --color=auto"
 # # редактор по дефолту
 export EDITOR=/usr/bin/vim
-# # пути где искать бинарники
+# add custom scripts location to PATH
 export PATH="$PATH:$HOME/bin"
-
+# set /usr/local/bin at the beginning of the PATH on *BSD
+if [[ -d /usr/local/bin ]]; then
+    export PATH=`echo $PATH | sed 's/\(^.*\)\(\/usr\/local\/bin\:\)\(.*$\)/\2\1\3/g'`
+fi
 # # точка монтирования iPod Shuffle
 export IPOD_MOUNTPOINT=/media/CRUMB
 
