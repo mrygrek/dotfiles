@@ -40,8 +40,8 @@ fi
 # # точка монтирования iPod Shuffle
 export IPOD_MOUNTPOINT=/media/CRUMB
 
-# # ООо и русские имена файлов
-# задается в /etc/profile.d/openoffice.sh
+#Опции less
+export LESS='-R -S'
 
 # # забыл зачем ставил
 export LESSCHARSET=UTF-8
@@ -64,18 +64,6 @@ fi
 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-#Опции less
-export LESS='-R -S'
-#
-# # значение цветов            #30 черный текст            #40 черный фон
-#00 восстановление цвета по умолчанию    #31 красный текст            #41 красный фон
-#01 включить яркие цвета        #32 зеленый текст            #42 зеленый фон
-#04 подчеркнутый текст            #33 желтый (или коричневый) текст    #43 желтый (или коричневый) фон
-#05 мигающий текст            #34 синий текст                #44 синий фон
-# # ну или color юзать            #35 фиолетовый текст            #45 фиолетовый фон
-##                  #36 cyan текст                #46 cyan фон
-##                     #37 белый (или серый) текст        #47 белый (или серый) фон
-#
 # # Shell functions
 setenv() { typeset -x "${1}${1:+=}${(@)argv[2,$#]}" } # csh compatibility
 freload() { while (( $)); do; unfunction $1; autoload -U $1; shift; done }
