@@ -37,6 +37,9 @@ export PATH="$PATH:$HOME/bin"
 if [[ -d /usr/local/bin ]]; then
     export PATH=`echo $PATH | sed 's/\(^.*\)\(\/usr\/local\/bin\:\)\(.*$\)/\2\1\3/g'`
 fi
+if [[ -d /usr/local/Cellar/ruby/1.9.3-p327/bin ]]; then
+    export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p327/bin"
+fi
 # # точка монтирования iPod Shuffle
 export IPOD_MOUNTPOINT=/media/CRUMB
 
@@ -117,7 +120,12 @@ unsetopt bgnice autoparamslash
 # #
 setopt autolist
 setopt menucomplete
-#
+
+# ZSH completions path
+# to re-initialize completions execute:
+#   $ rm -f ~/.zcompdump; compinit
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 # # автоматическое удаление одинакового из этого массива
 typeset -U path cdpath fpath manpath
 # # загружаем список цветов
