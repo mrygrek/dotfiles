@@ -37,8 +37,8 @@ export PATH="$PATH:$HOME/bin"
 if [[ -d /usr/local/bin ]]; then
     export PATH=`echo $PATH | sed 's/\(^.*\)\(\/usr\/local\/bin\:\)\(.*$\)/\2\1\3/g'`
 fi
-if [[ -d /usr/local/Cellar/ruby/1.9.3-p327/bin ]]; then
-    export PATH="$PATH:/usr/local/Cellar/ruby/1.9.3-p327/bin"
+if [[ -d /usr/local/opt/ruby/bin ]]; then
+    export PATH="$PATH:/usr/local/opt/ruby/bin"
 fi
 # # точка монтирования iPod Shuffle
 export IPOD_MOUNTPOINT=/media/CRUMB
