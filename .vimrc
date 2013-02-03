@@ -15,6 +15,7 @@ Bundle 'https://github.com/scrooloose/nerdtree.git'
 Bundle 'https://github.com/Townk/vim-autoclose'
 Bundle 'https://github.com/Lokaltog/vim-powerline'
 Bundle 'https://github.com/kien/ctrlp.vim'
+Bundle 'https://github.com/plasticboy/vim-markdown.git'
 
 filetype plugin indent on     " required!"
 
