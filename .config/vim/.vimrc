@@ -51,6 +51,10 @@ set langmap=ёйцукенгшщзхъфывапролджэячсмитьбюЁ
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+" Use Unix filetype
+set fileformat=unix
+set fileformats=unix,dos
+
 " build tags of your own project with CTRL+F12
 "map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 noremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
