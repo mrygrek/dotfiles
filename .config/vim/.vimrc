@@ -1,4 +1,4 @@
-" 99-th line highlighting
+    " 99-th line highlighting
 highlight ColorColumn ctermbg=Cyan
 set colorcolumn=99
 " Highlighting for current line
@@ -114,3 +114,4 @@ let g:Powerline_colorscheme='skwp'
 " ------------------------------------------------------------------
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_cmd = 'CtrlPBuffer'
+let g:ctrlp_clear_cache_on_exit = 0
