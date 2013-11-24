@@ -1,5 +1,5 @@
 # OS specific aliases
-if [[ $OSTYPE == 'darwin12.0' ]]; then
+if [[ $OSTYPE == 'darwin13.0' ]]; then
     # Use coreutils if installed
     if [[ -d /usr/local/Cellar/coreutils ]]; then
         alias ls='gls -l -h --color=auto'
