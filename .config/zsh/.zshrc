@@ -58,7 +58,7 @@ else
     COLOR_ARGS='-b'
 fi
 
-if [[ $OSTYPE == 'darwin12.0' ]]; then
+if [[ $OSTYPE == 'darwin13.0' ]]; then
     export CLICOLOR=1
     eval $(gdircolors $COLOR_ARGS)
 elif [[ $OSTYPE == 'linux-gnu' ]]; then
