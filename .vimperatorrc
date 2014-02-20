@@ -17,7 +17,7 @@ command -nargs=* gmarks sidebar Закладки Google
 map <silent> <A-b> :sidebar Закладки<CR>
 
 " downloads in current tab
-map <silent> <C-y> :tabopen<CR> :downloads<CR>
+map <silent> <C-y> :tabopen about:downloads<CR>
 
 " open addons bar
 map <silent> <C-i> :set gui+=addons<CR>
